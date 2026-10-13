@@ -3,6 +3,7 @@ import logging
 import os
 import requests
 from pathlib import Path
+from urllib.parse import urlparse
 from dotenv import load_dotenv
 
 logger = logging.getLogger(__name__)
@@ -18,11 +19,12 @@ try:
     with open(BASE_PATH, "r", encoding="utf-8") as f:
         base_data = json.load(f)
         fontes = base_data.get("fontes_confiaveis", {})
-        urls_confiaveis = list(fontes.values())
-        logger.info("URLs confiáveis usadas: %s", urls_confiaveis)
+        # A Tavily filtra por domínio (include_domains), não por URL
+        dominios_confiaveis = sorted({urlparse(u).netloc.removeprefix("www.") for u in fontes.values()})
+        logger.info("Domínios confiáveis usados: %s", dominios_confiaveis)
 except Exception:
     logger.exception("Erro ao carregar base.json")
-    urls_confiaveis = []
+    dominios_confiaveis = []
 
 def buscar_conteudo_web(pergunta: str) -> str:
     try:
@@ -35,7 +37,7 @@ def buscar_conteudo_web(pergunta: str) -> str:
             "include_answer": True,
             "include_raw_content": False,
             "include_images": False,
-            "include_urls": urls_confiaveis,
+            "include_domains": dominios_confiaveis,
             "max_results": 5
         }
 
