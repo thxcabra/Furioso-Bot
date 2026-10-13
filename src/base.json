@@ -1,0 +1,13 @@
+{
+  "fontes_confiaveis": {
+    "cs2_masculino": "https://liquipedia.net/counterstrike/FURIA",
+    "cs2_feminino": "https://liquipedia.net/counterstrike/FURIA_Female",
+    "valorant_masculino": "https://liquipedia.net/valorant/FURIA",
+    "valorant_feminino": "https://liquipedia.net/valorant/FURIA_Female",
+    "lol": "https://lol.fandom.com/wiki/FURIA",
+    "r6": "https://www.ubisoft.com/pt-br/esports/rainbow-six/siege/team/9",
+    "loja": "https://www.furia.gg",
+    "twitter": "https://twitter.com/furiagg",
+    "instagram": "https://www.instagram.com/furiagg/"
+  }
+}
