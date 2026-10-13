@@ -8,6 +8,14 @@ FURIOSO was built in April–May 2025 for a FURIA Esports technical challenge: c
 
 Opinion questions ("Qual seu jogador favorito?") get an in-character answer. Questions about facts that change (lineups, coaches, signings, next matches) trigger a web search and are answered from what the search returns.
 
+## Screenshot
+
+<p align="center">
+  <img src="docs/screenshots/commands.png" alt="The /start, /menu and /resenha commands answering" width="70%" />
+</p>
+
+<sub>The bot's real command handlers answering `/start`, `/menu` and `/resenha` in a local run, without Telegram.</sub>
+
 ## Features
 
 | Command | What it does |
@@ -118,7 +126,7 @@ The bot uses long polling, so it needs no public domain or open port. Run a sing
 
 ## Author
 
-**João Cabral** · [GitHub](https://github.com/thxcabra) · [LinkedIn](https://www.linkedin.com/in/joao-cabral-machado/)
+**João Cabral** · [GitHub](https://github.com/thxcabra) · [LinkedIn](https://www.linkedin.com/in/joao-cabral-machado/) · [Portfolio](https://thxcabra.github.io/portfolio/#/projetos/4)
 
 ---
 
